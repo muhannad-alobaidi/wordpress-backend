@@ -8,31 +8,31 @@ Sekdev\lagerblad\Site::init();
 
 
 Sekdev\lagerblad\AjaxEndpoint::addGet(
-  'lagerblad/v1',
+  'endpoint/v1',
   'posts',
   [Sekdev\lagerblad\Site::class, 'getPosts']
 );
 
 Sekdev\lagerblad\AjaxEndpoint::addGet(
-  'lagerblad/v1',
+  'endpoint/v1',
   'pages',
   [Sekdev\lagerblad\Site::class, 'getPages']
 );
 
 Sekdev\lagerblad\AjaxEndpoint::addGet(
-  'lagerblad/v1',
+  'endpoint/v1',
   'navi',
   [Sekdev\lagerblad\Site::class, 'getNavi']
 );
 
 Sekdev\lagerblad\AjaxEndpoint::addGet(
-  'lagerblad/v1',
+  'endpoint/v1',
   'objects',
   [Sekdev\lagerblad\Site::class, 'getObjects']
 );
 
 function searchProductsEndpoint() {
-  register_rest_route( 'lagerblad/v1', '/searchProducts', [
+  register_rest_route( 'endpoint/v1', '/searchProducts', [
     'method' => 'GET',
     'callback' => ['Sekdev\\lagerblad\\Site', 'getSearchProducts'],
     'args' => [ 'search_query' => [
@@ -45,7 +45,7 @@ function searchProductsEndpoint() {
 add_action( 'rest_api_init', 'searchProductsEndpoint');
 
 function searchRecipesEndpoint() {
-  register_rest_route( 'lagerblad/v1', '/searchRecipes', [
+  register_rest_route( 'endpoint/v1', '/searchRecipes', [
     'method' => 'GET',
     'callback' => ['Sekdev\\lagerblad\\Site', 'getSearchRecipes'],
     'args' => [ 'search_query' => [
@@ -58,7 +58,7 @@ function searchRecipesEndpoint() {
 add_action( 'rest_api_init', 'searchRecipesEndpoint');
 
 function allProductsEndpoint() {
-  register_rest_route( 'lagerblad/v1', '/allProducts', [
+  register_rest_route( 'endpoint/v1', '/allProducts', [
     'method' => 'GET',
     'callback' => ['Sekdev\\lagerblad\\Site', 'getProducts'],
     'args' => [ 'query' => [
