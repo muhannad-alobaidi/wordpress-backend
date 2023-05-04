@@ -1,0 +1,19 @@
+{
+    "name": "Sekdev/lagerblad-theme",
+    "description": "lagerblad theme",
+    "type": "project",
+    "license": "PRIVATE",
+    "authors": [
+        {
+            "name": "Tuomas Hiukkanen",
+            "email": "tuomas.hiukkanen@Sekdev.fi"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+      "psr-4": {
+        "Sekdev\\lagerblad\\": "lib/"
+      }
+    }
+}
